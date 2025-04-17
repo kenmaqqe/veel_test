@@ -1,0 +1,1 @@
+export { displayLogo } from "./displayLogo";

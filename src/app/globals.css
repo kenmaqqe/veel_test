@@ -24,3 +24,17 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.button-create {
+  background-color: #55db34;
+}
+.button-create:hover {
+  background-color: #45a049;
+}
+.button-delete {
+  background-color: #f44336;
+}
+.button-delete:hover {
+  background-color: #da190b;
+}
+
