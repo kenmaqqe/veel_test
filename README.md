@@ -61,6 +61,8 @@ veel_test/
 ├── public/ # Static assets
 └── package.json # Project metadata & dependencies
 
+---
+
 ### 📜 Available Scripts
 
 | Command         | Description                    |
