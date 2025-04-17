@@ -1,36 +1,115 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📝 Veel Test Todo App
 
-## Getting Started
+A modern and minimal Todo application built with **Next.js** and **TypeScript**, featuring real-time updates, responsive UI, and clean code architecture.
 
-First, run the development server:
+---
+
+## 🚀 Tech Stack
+
+- **Next.js** 15.3.0
+- **React** 19
+- **TypeScript**
+- **Tailwind CSS**
+- **React Hook Form**
+- **Axios**
+
+---
+
+## ⚙️ Getting Started
+
+### ✅ Prerequisites
+
+Make sure you have the following installed:
+
+- **Node.js** (v18 or higher)
+- **npm** (v9 or higher)
+
+### 📦 Installation
+
+Clone the repo and install dependencies:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/kenmaqqe/veel_test.git
+cd veel_test
+yarn install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+🧪 Run the App
+Start the development server:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+yarn dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Visit the app at http://localhost:3000
 
-## Learn More
+### 📁 Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+veel_test/
+├── src/
+│ ├── app/
+│ │ └── page.tsx # Main application page
+│ ├── components/
+│ │ ├── Button/ # Reusable button component
+│ │ ├── ModalAdd/ # Todo creation modal
+│ │ ├── StatusIndicator/ # Todo status badge
+│ │ └── TodoCard/ # Todo item card component
+│ ├── services/
+│ │ └── todoServices.ts # API service functions
+│ └── types/
+│ └── \*.ts # TypeScript interfaces & types
+├── public/ # Static assets
+└── package.json # Project metadata & dependencies
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 📜 Available Scripts
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+| Command         | Description                    |
+| --------------- | ------------------------------ |
+| `npm run dev`   | Start the development server   |
+| `npm run build` | Build for production           |
+| `npm start`     | Start production server        |
+| `npm run lint`  | Run ESLint to check code style |
 
-## Deploy on Vercel
+### ✨ Features
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+➕ Create new todos
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+❌ Delete existing todos
+
+✅ Toggle todo completion status
+
+📱 Fully responsive design
+
+🔄 Real-time updates
+
+⚠️ Error handling
+
+⏳ Loading states
+
+### 🤝 Contributing
+
+Contributions are welcome! Here's how:
+
+Fork the repo
+
+Create your feature branch
+
+```bash
+git checkout -b feature/AmazingFeature
+```
+
+Commit your changes
+
+```bash
+git cz
+```
+
+Push to your branch
+
+```bash
+git push origin feature/AmazingFeature
+```
+
+Open a Pull Request 🙌
+
+Made with ❤️ for modern developers.
