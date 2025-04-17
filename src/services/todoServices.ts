@@ -1,7 +1,7 @@
 import axios from "axios";
-import { TodoInterface } from "@/types";
+import { TodoInterface } from "@/types/TodoCardInterface";
 
-export const getTodos = async () => {
+export const getTodos = async (): Promise<TodoInterface[]> => {
   try {
     const res = await axios.get(
       "https://jsonplaceholder.typicode.com/todos?_limit=10"
@@ -13,10 +13,10 @@ export const getTodos = async () => {
   }
 };
 
-export const addTodo = async (data: TodoInterface) => {
+export const addTodo = async (todo: TodoInterface): Promise<TodoInterface> => {
   try {
     const res = await axios.post("https://jsonplaceholder.typicode.com/todos", {
-      data,
+      todo,
     });
     return res.data;
   } catch (error) {
@@ -25,7 +25,7 @@ export const addTodo = async (data: TodoInterface) => {
   }
 };
 
-export const deleteTodo = async (id: number) => {
+export const deleteTodo = async (id: string): Promise<void> => {
   try {
     await axios.delete(`https://jsonplaceholder.typicode.com/todos/${id}`);
   } catch (error) {

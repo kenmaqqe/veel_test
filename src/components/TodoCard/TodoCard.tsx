@@ -1,18 +1,14 @@
 import React from "react";
-import { TodoInterface } from "@/types";
+import { TodoCardProps } from "@/types/TodoCardInterface";
 import { Button, StatusIndicator } from "@/components";
 import { deleteTodo } from "@/services/todoServices";
 
-interface TodoCardProps extends TodoInterface {
-  onDelete: (id: string | number) => void;
-}
-
 const TodoCard: React.FC<TodoCardProps> = ({ todo, onDelete }) => {
-  const [completed, setCompleted] = React.useState(todo.completed);
+  const [completed, setCompleted] = React.useState<boolean>(todo.completed);
 
-  const handleDelete = async (id: number | string) => {
+  const handleDelete = async (id: string) => {
     try {
-      await deleteTodo(Number(id));
+      await deleteTodo(id);
       onDelete(id);
     } catch (error) {
       console.error("Error deleting todo:", error);
