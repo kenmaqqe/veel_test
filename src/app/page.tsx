@@ -4,6 +4,7 @@ import React, { useEffect } from "react";
 import { Button, TodoCard, ModalAdd } from "@/components";
 import { getTodos } from "@/services/todoServices";
 import { TodoInterface } from "@/types/TodoCardInterface";
+import { displayLogo } from "@/hooks";
 
 const Page = () => {
   const [showModal, setShowModal] = React.useState<boolean>(false);
@@ -20,6 +21,7 @@ const Page = () => {
   };
 
   useEffect(() => {
+    displayLogo();
     const fetchData = async () => {
       try {
         setIsLoading(true);
@@ -48,7 +50,9 @@ const Page = () => {
     <div className="min-h-screen bg-gray-100 p-3 sm:p-4 md:p-6 lg:p-8">
       <div className="max-w-7xl mx-auto px-2 sm:px-4">
         <div className="flex flex-col sm:flex-row justify-center sm:justify-between items-center gap-4 mb-6 sm:mb-8 text-center sm:text-left">
-          <h1 className="text-2xl sm:text-3xl font-bold text-gray-800">Todo List</h1>
+          <h1 className="text-2xl sm:text-3xl font-bold text-gray-800">
+            Todo List
+          </h1>
           <Button
             onClick={() => setShowModal(true)}
             disabled={isLoading}
